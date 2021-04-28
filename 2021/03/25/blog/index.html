@@ -56,7 +56,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":"209ab21a22e1fadb0065e45d0a5fc7fb","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"209ab21a22e1fadb0065e45d0a5fc7fb","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16
+      17
        分钟
     </span>
   
@@ -291,8 +291,8 @@ GitHub Actions会在master有更新时执行<code>npm run build</code>并将成�
 
 <h1 id="为Hexo博客添加百度统计"><a href="#为Hexo博客添加百度统计" class="headerlink" title="为Hexo博客添加百度统计"></a>为Hexo博客添加百度统计</h1><p>fluid主题支持百度统计配置，只需要在百度统计中创建网站，在配置文件中填写对应代码即可。</p>
 <p>1.新增网站<br>  登录<a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/welcome/login">百度统计</a>，进入<strong>管理-》账户管理-》网站列表-》自有网站</strong>，点击<strong>新增网站</strong>填写网站信息。</p>
-<p>2.配置秘钥<br>  在网站列表操作项中点击<strong>代码获取</strong>，复制<code>hm.src = &quot;https://hm.baidu.com/hm.js?xxxx&quot;;</code>中<code>.js?</code>后面的字符串，填写到<code>_config.fluid.yml</code>中<br>  <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">baidu</span>: <span class="hljs-number">209</span>ab<span class="hljs-number">21</span>******<span class="hljs-number">0</span>a<span class="hljs-number">5</span>fc<span class="hljs-number">7</span>fb<br></code></pre></td></tr></table></figure></p>
-<p>3.检查安装<br>  推送博客源码到GitHub，</p>
+<p>2.配置秘钥<br>  在网站列表操作项中点击<strong>代码获取</strong>，复制<code>hm.src = &quot;https://hm.baidu.com/hm.js?xxxx&quot;;</code>中<code>.js?</code>后面的字符串，填写到<code>_config.fluid.yml</code>中，同时确保<code>web_analytics</code>的<code>enable</code>为<code>true</code><br>  <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">web_analytics</span>:<br>  <span class="hljs-attribute">enable</span>: true<br>  <span class="hljs-attribute">baidu</span>: <span class="hljs-number">209</span>ab<span class="hljs-number">21</span>******<span class="hljs-number">0</span>a<span class="hljs-number">5</span>fc<span class="hljs-number">7</span>fb<br></code></pre></td></tr></table></figure></p>
+<p>3.检查安装<br>  推送博客源码到GitHub，部署完成后在百度统计后台<strong>管理-》代码管理-》代码安装检查</strong>确认已正确安装。</p>
 
             </div>
             <hr>
@@ -513,6 +513,30 @@ GitHub Actions会在master有更新时执行<code>npm run build</code>并将成�
 
 
 
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?209ab21a22e1fadb0065e45d0a5fc7fb";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
