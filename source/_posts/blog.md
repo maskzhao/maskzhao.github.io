@@ -184,10 +184,12 @@ fluid主题支持百度统计配置，只需要在百度统计中创建网站，
   登录[百度统计](https://tongji.baidu.com/web/welcome/login)，进入**管理-》账户管理-》网站列表-》自有网站**，点击**新增网站**填写网站信息。
 
 2.配置秘钥
-  在网站列表操作项中点击**代码获取**，复制`hm.src = "https://hm.baidu.com/hm.js?xxxx";`中`.js?`后面的字符串，填写到`_config.fluid.yml`中
+  在网站列表操作项中点击**代码获取**，复制`hm.src = "https://hm.baidu.com/hm.js?xxxx";`中`.js?`后面的字符串，填写到`_config.fluid.yml`中，同时确保`web_analytics`的`enable`为`true`
   ```
-  baidu: 209ab21******0a5fc7fb
+  web_analytics:
+    enable: true
+    baidu: 209ab21******0a5fc7fb
   ```
 
 3.检查安装
-  推送博客源码到GitHub，
+  推送博客源码到GitHub，部署完成后在百度统计后台**管理-》代码管理-》代码安装检查**确认已正确安装。
