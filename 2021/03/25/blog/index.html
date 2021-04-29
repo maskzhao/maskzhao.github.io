@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="icon" href="/images/avatar.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -56,7 +56,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"209ab21a22e1fadb0065e45d0a5fc7fb","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.10","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"209ab21a22e1fadb0065e45d0a5fc7fb","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -165,6 +165,8 @@
           <div class="page-header text-center fade-in-up">
             <span class="h2" id="subtitle" title="Hexo创建博客托管GitHub Pages完全指南">
               
+                Hexo创建博客托管GitHub Pages完全指南
+              
             </span>
 
             
@@ -185,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.6k 字
     </span>
   
 
@@ -195,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      17
+      19
        分钟
     </span>
   
@@ -236,8 +238,7 @@
 <li>使用<a target="_blank" rel="noopener" href="https://github.com/features/actions">GitHub Actions</a>自动部署博客<!-- - 自定义域名访问GitHub Pages托管的域名 --></li>
 <li>为Hexo博客配置自适应主题<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">fluid</a></li>
 <li>为Hexo博客配置无后端评论插件<a target="_blank" rel="noopener" href="https://valine.js.org/">valine</a></li>
-<li>为Hexo博客添加<a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/welcome/login">百度统计</a></li>
-<li>为Hexo博客添加<a target="_blank" rel="noopener" href="https://analytics.google.com/analytics/web/">Google Analytics</a></li>
+<li>为Hexo博客添加<a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/welcome/login">百度统计</a><!-- - 为Hexo博客添加[Google Analytics](https://analytics.google.com/analytics/web/) --></li>
 </ul>
 <h1 id="用Hexo创建并使用GitHub-Pages托管博客"><a href="#用Hexo创建并使用GitHub-Pages托管博客" class="headerlink" title="用Hexo创建并使用GitHub Pages托管博客"></a>用Hexo创建并使用GitHub Pages托管博客</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Hexo基于Nodejs的博客框架，支持Markdown作为源文件，生成静态网页。</p>
 <ul>
@@ -274,11 +275,11 @@ GitHub Actions会在master有更新时执行<code>npm run build</code>并将成�
 2.在DNS解析设置中创建CNAME记录，使子域指向您站点的默认域。 例如，如果要对您的用户站点使用子域 www.example.com，您可以创建 CNAME 记录，使 www.example.com 指向 <user>.github.io。 -->
 
 
-<h1 id="为Hexo博客配置自适应主题fluid"><a href="#为Hexo博客配置自适应主题fluid" class="headerlink" title="为Hexo博客配置自适应主题fluid"></a>为Hexo博客配置自适应主题fluid</h1><p><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">fluid</a>是一款Material Design风格的主题，支持响应式。</p>
+<h1 id="配置fluid主题"><a href="#配置fluid主题" class="headerlink" title="配置fluid主题"></a>配置fluid主题</h1><p><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">fluid</a>是一款Material Design风格的主题，支持响应式。</p>
 <p>1.获取主题最新版本<br>  Hexo 5.0.0以上版本，通过npm安装，在博客根目录执行以下命令<br>  <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install <span class="hljs-comment">--save hexo-theme-fluid</span><br></code></pre></td></tr></table></figure><br>  然后在博客目录下创建<code> _config.fluid.yml</code>，将主题的<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">_config.yml</a> 内容复制进去。</p>
 <p>2.修改hexo配置文件<code>_config.yml</code>主题配置<br>  <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> fluid  <span class="hljs-meta"># 指定主题</span><br><span class="hljs-symbol">language:</span> <span class="hljs-built_in">zh</span>-CN  <span class="hljs-meta"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></p>
 <p>3.重启本地服务，查看效果</p>
-<h1 id="为Hexo博客配置无后端评论插件valine"><a href="#为Hexo博客配置无后端评论插件valine" class="headerlink" title="为Hexo博客配置无后端评论插件valine"></a>为Hexo博客配置无后端评论插件valine</h1><p><a target="_blank" rel="noopener" href="https://valine.js.org/">valine</a>是一款快速、简洁且高效的无后端评论系统。fluid主题集成了对valine的支持，下面我们基于fluid来添加valine。</p>
+<h1 id="配置评论插件valine"><a href="#配置评论插件valine" class="headerlink" title="配置评论插件valine"></a>配置评论插件valine</h1><p><a target="_blank" rel="noopener" href="https://valine.js.org/">valine</a>是一款快速、简洁且高效的无后端评论系统。fluid主题集成了对valine的支持，下面我们基于fluid来添加valine。</p>
 <p>1.注册Leancloud账号并认证<br>  前往<a target="_blank" rel="noopener" href="https://console.leancloud.cn/register">LeanCloud</a>官网注册账号，登录后完成身份认证、邮箱验证。</p>
 <p>2.创建应用<br>  <img src="leancloud-create-app.png" srcset="/img/loading.gif" lazyload></p>
 <p>3.在<code>_config.fluid.yml</code>中开启评论并配置参数<br>  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">comments:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">valine</span><br><span class="hljs-attr">valine:</span><br>  <span class="hljs-attr">appid:</span> <span class="hljs-string">xxxx</span><br>  <span class="hljs-attr">appkey:</span> <span class="hljs-string">xxxx</span><br></code></pre></td></tr></table></figure><br>  其中的appid和appkey在<strong>应用-》设置-》应用keys</strong>页面查找</p>
@@ -289,10 +290,14 @@ GitHub Actions会在master有更新时执行<code>npm run build</code>并将成�
 <!-- todo: hexo支持图片  -->
 
 
-<h1 id="为Hexo博客添加百度统计"><a href="#为Hexo博客添加百度统计" class="headerlink" title="为Hexo博客添加百度统计"></a>为Hexo博客添加百度统计</h1><p>fluid主题支持百度统计配置，只需要在百度统计中创建网站，在配置文件中填写对应代码即可。</p>
+<h1 id="配置百度统计"><a href="#配置百度统计" class="headerlink" title="配置百度统计"></a>配置百度统计</h1><p>fluid主题支持百度统计配置，只需要在百度统计中创建网站，在配置文件中填写对应代码即可。</p>
 <p>1.新增网站<br>  登录<a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/welcome/login">百度统计</a>，进入<strong>管理-》账户管理-》网站列表-》自有网站</strong>，点击<strong>新增网站</strong>填写网站信息。</p>
 <p>2.配置秘钥<br>  在网站列表操作项中点击<strong>代码获取</strong>，复制<code>hm.src = &quot;https://hm.baidu.com/hm.js?xxxx&quot;;</code>中<code>.js?</code>后面的字符串，填写到<code>_config.fluid.yml</code>中，同时确保<code>web_analytics</code>的<code>enable</code>为<code>true</code><br>  <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">web_analytics</span>:<br>  <span class="hljs-attribute">enable</span>: true<br>  <span class="hljs-attribute">baidu</span>: <span class="hljs-number">209</span>ab<span class="hljs-number">21</span>******<span class="hljs-number">0</span>a<span class="hljs-number">5</span>fc<span class="hljs-number">7</span>fb<br></code></pre></td></tr></table></figure></p>
 <p>3.检查安装<br>  推送博客源码到GitHub，部署完成后在百度统计后台<strong>管理-》代码管理-》代码安装检查</strong>确认已正确安装。</p>
+<p>4.查看访客数据<br>  代码安装成功20分钟后百度统计后台即可查看访问信息。<br>  <img src="baidu-tongji.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="hexo常用功能"><a href="#hexo常用功能" class="headerlink" title="hexo常用功能"></a>hexo常用功能</h1><h2 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h2><p>资源是<code>source</code>文件夹下除了文章意外的所有文件，如图片、css、js等。项目通用图片可以放在<code>source/images</code>文件夹中。通过<code>![](/images/image.jpg)</code>引用。</p>
+<h2 id="文章资源文件夹"><a href="#文章资源文件夹" class="headerlink" title="文章资源文件夹"></a>文章资源文件夹</h2><p>如果文章包含的图片比较多，通常把文字和资源单独保存更合理。在<code>config.yml</code>中设置<code>post_asset_folder: true</code>，使用<code>hexo new [layout] &lt;title&gt;</code>创建文章时，会创建同名文件夹。在该文件夹下保存的图片可以直接在文章中引用，如<code>![](hello.jpg)</code></p>
+<h2 id="修改网站图标"><a href="#修改网站图标" class="headerlink" title="修改网站图标"></a>修改网站图标</h2><p>将图标保存到<code>source/images</code>目录下。如<code>avatar.jpg</code>，在<code>_config.fluid.yml</code>中配置<code>favicon: /images/avatar.jpg</code></p>
 
             </div>
             <hr>
@@ -312,12 +317,6 @@ GitHub Actions会在master有更新时执行<code>npm run build</code>并将成�
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/2021/04/28/hello-world/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
@@ -477,17 +476,6 @@ GitHub Actions会在master有更新时执行<code>npm run build</code>并将成�
 
 
 
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-      typing(title)
-      
-    })(window, document);
-  </script>
 
 
 
