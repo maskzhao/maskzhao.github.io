@@ -14,7 +14,7 @@ date: 2021-03-25 10:29:45
 - 为Hexo博客配置自适应主题[fluid](https://github.com/fluid-dev/hexo-theme-fluid)
 - 为Hexo博客配置无后端评论插件[valine](https://valine.js.org/)
 - 为Hexo博客添加[百度统计](https://tongji.baidu.com/web/welcome/login)
-- 为Hexo博客添加[Google Analytics](https://analytics.google.com/analytics/web/)
+<!-- - 为Hexo博客添加[Google Analytics](https://analytics.google.com/analytics/web/) -->
 
 
 # 用Hexo创建并使用GitHub Pages托管博客
@@ -125,7 +125,7 @@ GitHub Actions会在master有更新时执行`npm run build`并将成成的`docs`
 2.在DNS解析设置中创建CNAME记录，使子域指向您站点的默认域。 例如，如果要对您的用户站点使用子域 www.example.com，您可以创建 CNAME 记录，使 www.example.com 指向 <user>.github.io。 -->
 
 
-# 为Hexo博客配置自适应主题fluid
+# 配置fluid主题
 
 [fluid](https://github.com/fluid-dev/hexo-theme-fluid)是一款Material Design风格的主题，支持响应式。
 
@@ -145,7 +145,7 @@ GitHub Actions会在master有更新时执行`npm run build`并将成成的`docs`
 3.重启本地服务，查看效果
 
 
-# 为Hexo博客配置无后端评论插件valine
+# 配置评论插件valine
 
 [valine](https://valine.js.org/)是一款快速、简洁且高效的无后端评论系统。fluid主题集成了对valine的支持，下面我们基于fluid来添加valine。
 
@@ -176,7 +176,7 @@ GitHub Actions会在master有更新时执行`npm run build`并将成成的`docs`
 <!-- todo: hexo支持图片  -->
 
 
-# 为Hexo博客添加百度统计
+# 配置百度统计
 
 fluid主题支持百度统计配置，只需要在百度统计中创建网站，在配置文件中填写对应代码即可。
 
@@ -193,3 +193,23 @@ fluid主题支持百度统计配置，只需要在百度统计中创建网站，
 
 3.检查安装
   推送博客源码到GitHub，部署完成后在百度统计后台**管理-》代码管理-》代码安装检查**确认已正确安装。
+
+4.查看访客数据
+  代码安装成功20分钟后百度统计后台即可查看访问信息。
+  ![](baidu-tongji.png)
+
+
+# hexo常用功能
+
+## 资源文件夹
+
+资源是`source`文件夹下除了文章意外的所有文件，如图片、css、js等。项目通用图片可以放在`source/images`文件夹中。通过`![](/images/image.jpg)`引用。
+
+## 文章资源文件夹
+
+如果文章包含的图片比较多，通常把文字和资源单独保存更合理。在`config.yml`中设置`post_asset_folder: true`，使用`hexo new [layout] <title>`创建文章时，会创建同名文件夹。在该文件夹下保存的图片可以直接在文章中引用，如`![](hello.jpg)`
+
+## 修改网站图标
+
+将图标保存到`source/images`目录下。如`avatar.jpg`，在`_config.fluid.yml`中配置`favicon: /images/avatar.jpg`
+
